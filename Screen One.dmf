@@ -1,0 +1,509 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "Northeast+REP"
+		command = ".northeast"
+	elem 
+		name = "Southeast+REP"
+		command = ".southeast"
+	elem 
+		name = "Southwest+REP"
+		command = ".southwest"
+	elem 
+		name = "Northwest+REP"
+		command = ".northwest"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "South+REP"
+		command = ".south"
+	elem 
+		name = "A+REP"
+		command = "Attack"
+
+
+menu "menu"
+
+
+window "Bars"
+	elem "Bars"
+		type = MAIN
+		pos = 0,675
+		size = 191x158
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		alpha = 227
+	elem "Health"
+		type = BAR
+		pos = 42,5
+		size = 100x100
+		anchor1 = none
+		anchor2 = none
+		background-color = #c0c0c0
+		saved-params = ""
+		bar-color = #800000
+		is-slider = false
+		width = 30
+		dir = clockwise
+		angle1 = 0.001000
+		angle2 = 0
+		value = 99
+	elem "Stamina"
+		type = BAR
+		pos = 127,96
+		size = 60x60
+		anchor1 = none
+		anchor2 = none
+		background-color = #c0c0c0
+		saved-params = ""
+		bar-color = #828200
+		is-slider = false
+		width = 20
+		dir = clockwise
+		angle1 = 0.001000
+		angle2 = 0
+		value = 80
+	elem "Energy"
+		type = BAR
+		pos = 5,98
+		size = 60x60
+		anchor1 = none
+		anchor2 = none
+		background-color = #c0c0c0
+		saved-params = ""
+		bar-color = #2424ff
+		is-slider = false
+		width = 20
+		dir = clockwise
+		angle1 = 0.001000
+		angle2 = 0
+		value = 80
+
+window "ChatWindow"
+	elem "ChatWindow"
+		type = MAIN
+		pos = 281,0
+		size = 255x317
+		anchor1 = none
+		anchor2 = none
+		background-color = #c0c0c0
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "ChatWindow"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+		alpha = 148
+		menu = "menu"
+	elem "Chat"
+		type = OUTPUT
+		pos = 0,0
+		size = 255x317
+		anchor1 = 0,0
+		anchor2 = 100,100
+		text-color = #c0c0c0
+		background-color = #000000
+		is-default = true
+		saved-params = "max-lines"
+
+window "MainWindow"
+	elem "MainWindow"
+		type = MAIN
+		pos = 0,0
+		size = 1424x786
+		anchor1 = none
+		anchor2 = none
+		background-color = #1f1f1f
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "MainWindow"
+		statusbar = false
+		macro = "macro"
+		menu = "menu"
+	elem "child2"
+		type = CHILD
+		pos = 1106,393
+		size = 318x391
+		anchor1 = 78,50
+		anchor2 = 100,100
+		background-color = #000000
+		saved-params = "splitter"
+		left = "ChatWindow"
+		is-vert = false
+	elem "child1"
+		type = CHILD
+		pos = 1109,26
+		size = 316x358
+		anchor1 = 78,3
+		anchor2 = 100,49
+		background-color = #000000
+		saved-params = "splitter"
+		left = "Stats"
+		is-vert = false
+		splitter = 100
+		lock = left
+	elem "Display"
+		type = MAP
+		pos = 0,0
+		size = 1100x786
+		anchor1 = 0,0
+		anchor2 = 77,100
+		text-color = none
+		saved-params = "icon-size"
+	elem "Maximize"
+		type = BUTTON
+		pos = 1365,0
+		size = 31x25
+		anchor1 = 96,0
+		anchor2 = 98,3
+		font-style = "bold"
+		background-color = #800000
+		saved-params = "is-checked"
+		text = "M"
+		command = ".maximize"
+	elem "Quit"
+		type = BUTTON
+		pos = 1396,0
+		size = 30x25
+		anchor1 = 98,0
+		anchor2 = 100,3
+		font-style = "bold"
+		background-color = #800000
+		saved-params = "is-checked"
+		text = "X"
+		command = "quitme"
+
+window "Skills"
+	elem "Skills"
+		type = MAIN
+		pos = 281,0
+		size = 452x456
+		anchor1 = none
+		anchor2 = none
+		background-color = #1f1f1f
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "button2"
+		type = BUTTON
+		pos = 3,1
+		size = 92x32
+		anchor1 = 1,0
+		anchor2 = 21,7
+		font-style = "bold"
+		background-color = #408080
+		saved-params = "is-checked"
+		text = "Stats"
+		command = ".winset \"child1.left=Stats\""
+	elem "button1"
+		type = BUTTON
+		pos = 274,1
+		size = 92x32
+		anchor1 = 61,0
+		anchor2 = 81,7
+		background-color = #8080c0
+		border = sunken
+		saved-params = "is-checked"
+		text = "Skills"
+		command = ""
+	elem "Skill"
+		type = GRID
+		pos = -1,36
+		size = 452x419
+		anchor1 = 0,8
+		anchor2 = 100,100
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		highlight-color = #8080ff
+		is-list = true
+
+window "Statbox"
+	elem "Statbox"
+		type = MAIN
+		pos = 280,8
+		size = 594x397
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "donebotton"
+		type = BUTTON
+		pos = 480,369
+		size = 70x22
+		anchor1 = none
+		anchor2 = none
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = "is-checked"
+		text = "Done"
+		command = ""
+	elem "namelabel"
+		type = LABEL
+		pos = 66,67
+		size = 77x23
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Name:"
+	elem "Namer"
+		type = INPUT
+		pos = 156,69
+		size = 233x20
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		command = "nameme"
+	elem "points2"
+		type = LABEL
+		pos = 155,97
+		size = 32x25
+		anchor1 = none
+		anchor2 = none
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "0"
+		text-wrap = true
+	elem "points"
+		type = LABEL
+		pos = 65,96
+		size = 78x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Points:"
+	elem "infobox2"
+		type = LABEL
+		pos = 407,132
+		size = 145x222
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Not sure what to put here yet...."
+		text-wrap = true
+	elem "infobox"
+		type = LABEL
+		pos = 240,133
+		size = 145x222
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "This is a place to distribute stat points you'd like on your character"
+		text-wrap = true
+	elem "Speed"
+		type = LABEL
+		pos = 64,249
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Speed"
+	elem "Defense"
+		type = LABEL
+		pos = 63,326
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Defense"
+	elem "Offense"
+		type = LABEL
+		pos = 63,289
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Offense"
+	elem "Endurance"
+		type = LABEL
+		pos = 64,209
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Endurance"
+	elem "Strength"
+		type = LABEL
+		pos = 65,170
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Strength"
+	elem "Energy"
+		type = LABEL
+		pos = 64,132
+		size = 122x26
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Energy"
+
+window "Stats"
+	elem "Stats"
+		type = MAIN
+		pos = 281,0
+		size = 452x456
+		anchor1 = none
+		anchor2 = none
+		background-color = #1e1e1e
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Stats"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "info1"
+		type = INFO
+		pos = 1,37
+		size = 448x419
+		anchor1 = 0,8
+		anchor2 = 99,100
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		tab-text-color = #ffffff
+		tab-background-color = #1f1f1f
+		prefix-color = #ffffff
+		suffix-color = #ffffff
+	elem "button4"
+		type = BUTTON
+		pos = 242,0
+		size = 92x32
+		anchor1 = 54,0
+		anchor2 = 73,8
+		font-style = "bold"
+		background-color = #408080
+		saved-params = "is-checked"
+		text = "Skills"
+		command = ".winset \"child1.left=Skills\""
+	elem "button3"
+		type = BUTTON
+		pos = 2,-1
+		size = 92x32
+		anchor1 = 0,0
+		anchor2 = 19,8
+		background-color = #8080c0
+		border = sunken
+		saved-params = "is-checked"
+		text = "Stats"
+		command = ""
+
+window "window6"
+	elem "window6"
+		type = MAIN
+		pos = 281,0
+		size = 452x456
+		anchor1 = none
+		anchor2 = none
+		background-color = #2e2e2e
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Stats"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "button4"
+		type = BUTTON
+		pos = 242,0
+		size = 92x32
+		anchor1 = 54,0
+		anchor2 = 73,8
+		background-color = #408080
+		saved-params = "is-checked"
+		text = "Skills"
+		command = ".winset \"child1.left=Skills\""
+	elem "button3"
+		type = BUTTON
+		pos = 2,-1
+		size = 92x32
+		anchor1 = 0,0
+		anchor2 = 19,8
+		background-color = #8080c0
+		border = sunken
+		saved-params = "is-checked"
+		text = "Stats"
+		command = ""
+	elem "grid1"
+		type = GRID
+		pos = -1,35
+		size = 452x420
+		anchor1 = 0,10
+		anchor2 = 100,100
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		highlight-color = #000000
+
