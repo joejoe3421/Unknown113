@@ -1,0 +1,63 @@
+"a" = (/turf/grass,/area)
+"b" = (/turf/grass,/turf/LoginStuff/New,/area)
+"c" = (/turf,/area)
+
+(1,1,1) = {"
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaaa
+baaaaaaaaaaa
+aaaaaaaaaaaa
+"}
+
+(1,1,2) = {"
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+"}
+
+(1,1,3) = {"
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+"}
+
+(1,1,4) = {"
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+cccccccccccc
+"}
