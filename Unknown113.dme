@@ -1,0 +1,43 @@
+// DM Environment file for Unknown113.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "Icons"
+#define FILE_DIR "Icons/Effects"
+#define FILE_DIR "Icons/HUD"
+#define FILE_DIR "Icons/LoginStuff"
+#define FILE_DIR "Icons/Races"
+#define FILE_DIR "Icons/Races/Humans"
+#define FILE_DIR "Icons/Turf"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "Combat Systems.dm"
+#include "Damage Engine.dm"
+#include "Engines.dm"
+#include "HUD.dm"
+#include "Login.dm"
+#include "Turf.dm"
+#include "Unknown113.dm"
+#include "Varibles.dm"
+#include "Screen One.dmf"
+#include "Screen Map 2.dmm"
+#include "Screen Maps.dmm"
+#include "Code\Resources.dm"
+#include "Code\Crafting\Stations.dm"
+#include "Code\Crafting\Building\Base.dm"
+#include "Code\Crafting\Items\Fire.dm"
+#include "Code\Crafting\Items\Primitive\Weapons.dm"
+#include "Code\Crafting\Technology\Tech.dm"
+#include "Race Specifics\Changeling.dm"
+// END_INCLUDE
+
